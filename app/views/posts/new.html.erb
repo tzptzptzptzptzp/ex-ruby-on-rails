@@ -1,0 +1,15 @@
+<h1>新しい投稿</h1>
+
+<%= form_with model: @posts do |form| %>
+  <div>
+    <%= form.label :title %>
+      <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.label :content %>
+      <%= form.text_area :content %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+  <% end %>
