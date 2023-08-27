@@ -1,1 +1,26 @@
 <h1>Hello Ruby</h1>
+
+<div class="button-container">
+  <%= link_to "New Post" , new_post_path, class: "link-button" %>
+</div>
+
+<ul>
+  <% @posts.each do |post| %>
+    <li>
+      <h2>
+        <%= post.title %>
+      </h2>
+      <p>
+        <%= post.content %>
+      </p>
+      <span>
+        <small>
+          <%= post.created_at %>
+        </small>
+      </span>
+      <div class="edit-delete-wrapper">
+        <%= button_to 'delete' , post_path(post), method: :delete, class:"link-delete-button" %>
+      </div>
+    </li>
+    <% end %>
+</ul>
