@@ -19,7 +19,8 @@
         </small>
       </span>
       <div class="edit-delete-wrapper">
-        <%= button_to 'delete' , post_path(post), method: :delete, class:"link-delete-button" %>
+        <%= link_to "Edit" , edit_post_path(post), class: "link-button" %>
+          <%= button_to 'delete' , post_path(post), method: :delete, class:"link-delete-button" %>
       </div>
     </li>
     <% end %>
