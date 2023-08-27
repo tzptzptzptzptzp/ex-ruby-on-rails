@@ -1,5 +1,9 @@
 <h1>Hello Ruby</h1>
 
+<div class="button-container">
+  <%= link_to "New Post" , new_post_path, class: "link-button" %>
+</div>
+
 <ul>
   <% @posts.each do |post| %>
     <li>
